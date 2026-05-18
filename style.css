@@ -35,7 +35,7 @@ body {
 }
 
 /* ================================================
-   COMPONENTES GLOBAIS — HEADER E NAVEGAÇÃO
+   HEADER E NAVEGAÇÃO
    ================================================ */
 header {
   display: flex;
@@ -72,7 +72,7 @@ nav a {
 }
 
 /* ================================================
-   COMPONENTES GLOBAIS — FOOTER
+   FOOTER
    ================================================ */
 footer {
   text-align: center;
@@ -85,7 +85,7 @@ footer {
 }
 
 /* ================================================
-   PÁGINA — INDEX (HOME)
+   PÁGINA — INDEX
    ================================================ */
 .hero-section {
   display: grid;
@@ -283,4 +283,113 @@ footer {
 
 svg.bpmn-el {
   overflow: visible;
+}
+
+/* ================================================
+   RESPONSIVIDADE — DESKTOP 1400px
+   ================================================ */
+@media (min-width: 1400px) {
+  header {
+    padding: 1.5rem 8rem;
+  }
+
+  .hero-section {
+    max-width: 1400px;
+    padding: 0 8rem;
+  }
+
+  .process-grid {
+    max-width: 1400px;
+    padding: 2rem 8rem;
+    gap: 50px;
+  }
+
+  .bpmn-intro {
+    max-width: 1400px;
+    padding: 0 8rem;
+  }
+
+  .elements-grid {
+    max-width: 1400px;
+    padding: 0.1rem 8rem;
+    gap: 50px;
+  }
+
+  .process-detail-container {
+    max-width: 1400px;
+    padding: 2rem 8rem;
+  }
+}
+
+/* ================================================
+   RESPONSIVIDADE — CELULAR 480px
+   ================================================ */
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  nav ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .hero-text-content h1.academic-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-text-content .description {
+    font-size: 1rem;
+  }
+
+  .hero-image-content {
+    display: none;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .process-detail-container {
+    padding: 1.5rem;
+  }
+
+  #titulo-processo {
+    font-size: 1.1rem;
+  }
+
+  .bpmn-intro {
+    padding: 0 1.5rem;
+  }
+
+  .elements-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
 }
