@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre BPMN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+      <div class="logo">
+          <a href="index.html">Coordenação de Sistemas de Informação</a>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="bpmn.html">Sobre BPMN</a></li>
+              <li><a href="https://portal.ifba.edu.br/conquista/NORMASACADMICAS1.pdf">Normas Acadêmicas</a></li>
+              <li><a href="https://portal.ifba.edu.br/conquista/capas-e-paginas-menu-cursos/sistemas-de-informacao">Regulamentos Institucionais</a></li>
+          </ul>
+          </nav>
+  </header>
+
+<main>
+    <div class="bpmn-intro">
+      <h2>O que é BPMN?</h2>
+      <p>
+        Business Process Model and Notation é um padrão internacional para modelar processos de negócio de forma visual.
+        Ele usa símbolos gráficos simples (quadrados, losangos e círculos) para representar cada etapa, decisão e evento de um processo, e torna o fluxo compreensível tanto para quem executa quanto para quem analisa.
+      </p>
+
+      <h3 class="elements-title">Principais elementos usados nos diagramas:</h3>
+    </div>
+    
+      <div class="elements-grid">
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="64" height="64" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="26" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="2.5"/>
+            <circle cx="32" cy="32" r="8" fill="hsl(117,52%,39%)"/>
+          </svg>
+        </div>
+        <h3>Evento de Início</h3>
+        <p>Representa o <strong>ponto de partida</strong> do processo. O círculo vazio (ou com ícone) indica que algo aconteceu para desencadear o fluxo. Exemplo: o aluno protocola uma solicitação.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="64" height="64" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="26" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="4.5"/>
+            <circle cx="32" cy="32" r="10" fill="hsl(117,52%,39%)"/>
+          </svg>
+        </div>
+        <h3>Evento de Fim</h3>
+        <p>Marca o <strong>encerramento do processo</strong>. O círculo com borda mais grossa sinaliza que o fluxo chegou ao seu término. Exemplo: aprovação, conclusão ou encerramento da solicitação.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="110" height="54" viewBox="0 0 110 54">
+            <rect x="4" y="4" width="102" height="46" rx="8" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="2.5"/>
+            <text x="55" y="31" text-anchor="middle" font-size="12" font-family="Segoe UI,sans-serif" fill="hsl(117,52%,30%)" font-weight="600">Atividade</text>
+          </svg>
+        </div>
+        <h3>Tarefa (Task)</h3>
+        <p>Um <strong>retângulo com bordas arredondadas</strong> representa uma atividade ou tarefa realizada dentro do processo. O texto dentro da caixa descreve o que deve ser feito.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="64" height="64" viewBox="0 0 64 64">
+            <polygon points="32,4 60,32 32,60 4,32" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="2.5"/>
+            <text x="32" y="38" text-anchor="middle" font-size="20" font-family="Segoe UI,sans-serif" fill="hsl(117,52%,30%)" font-weight="900">✕</text>
+          </svg>
+        </div>
+        <h3>Gateway Exclusivo (XOR)</h3>
+        <p>O <strong>losango com X</strong> indica uma decisão onde <em>apenas um caminho</em> é seguido. Exemplo: o processo segue por "Aprovado" <em>ou</em> "Reprovado", nunca pelos dois ao mesmo tempo.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="64" height="64" viewBox="0 0 64 64">
+            <polygon points="32,4 60,32 32,60 4,32" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="2.5"/>
+            <text x="32" y="38" text-anchor="middle" font-size="20" font-family="Segoe UI,sans-serif" fill="hsl(117,52%,30%)" font-weight="900">+</text>
+          </svg>
+        </div>
+        <h3>Gateway Paralelo (AND)</h3>
+        <p>O <strong>losango com +</strong> divide o fluxo em <em>dois ou mais caminhos simultâneos</em>. Todas as ramificações acontecem ao mesmo tempo e o processo só continua quando todas terminarem.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="110" height="40" viewBox="0 0 110 40">
+            <line x1="10" y1="20" x2="90" y2="20" stroke="hsl(117,52%,39%)" stroke-width="2.5"/>
+            <polygon points="90,13 104,20 90,27" fill="hsl(117,52%,39%)"/>
+          </svg>
+        </div>
+        <h3>Fluxo de Sequência</h3>
+        <p>A <strong>seta sólida</strong> conecta os elementos na ordem em que ocorrem, indicando a direção do processo. Ela sempre parte de um elemento e aponta para o próximo passo.</p>
+      </div>
+
+      <div class="element-card">
+        <div class="visual">
+          <svg class="bpmn-el" width="110" height="56" viewBox="0 0 110 56">
+            <rect x="4" y="4" width="102" height="48" rx="6" fill="hsl(117,52%,94%)" stroke="hsl(117,52%,39%)" stroke-width="2"/>
+            <rect x="4" y="4" width="24" height="48" rx="6 0 0 6" fill="hsl(117,52%,80%)" stroke="hsl(117,52%,39%)" stroke-width="2"/>
+            <text x="16" y="33" text-anchor="middle" font-size="9" font-family="Segoe UI,sans-serif" fill="hsl(117,52%,25%)" font-weight="700" transform="rotate(-90,16,28)">Ator</text>
+            <text x="68" y="31" text-anchor="middle" font-size="10" font-family="Segoe UI,sans-serif" fill="hsl(117,52%,30%)">Raia (Lane)</text>
+          </svg>
+        </div>
+        <h3>Raias</h3>
+        <p>As <strong>raias horizontais ou verticais</strong> organizam o processo por <em>responsável</em> (aluno, coordenador, secretaria…). Tudo que aparece dentro de uma raia é responsabilidade daquele ator.</p>
+      </div>
+    </div>
+  </main>
+  
+    <footer>
+        <p>&copy; 2026 - Trabalho de Conclusão de Curso | Ana Júlia Santos Alves Pereira </p>
+    </footer>
+
+  </body>
+  </html>
+  </section>
